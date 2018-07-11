@@ -1,7 +1,7 @@
 pipeline {
   agent any
   libraries {
-    lib('')
+    lib('SharedLibs')
   }
   stages {
     stage('Say Hello') {
@@ -33,6 +33,11 @@ pipeline {
         echo "${KERNEL_VERSION}"
       }
     }
+    stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }
   }
   environment {
     MY_NAME = 'Joe'
