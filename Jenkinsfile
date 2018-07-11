@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  libraries {
+    lib('')
+  }
   stages {
     stage('Say Hello') {
       steps {
