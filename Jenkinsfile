@@ -5,8 +5,7 @@ pipeline {
       steps {
         echo "Hello ${MY_NAME}!"
         sh 'java -version'
-        sh '''echo "$TEST_USER_USR"
-echo "$TEST_USER_PWD"'''
+        echo '"$TEST_USER_USR : $TEST_USER_PWD"'
       }
     }
   }
