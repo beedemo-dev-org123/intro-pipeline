@@ -20,6 +20,11 @@ pipeline {
 
       }
     }
+    stage('Checkpoint') {
+      steps {
+        echo "${KERNEL_VERSION}"
+      }
+    }
     stage('Say Kernel') {
       steps {
         echo "${KERNEL_VERSION}"
